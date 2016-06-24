@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+var debug = require('debug')('47whatAFunction');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 4747);
+
+console.log("Going to start at port:", 4747);
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});

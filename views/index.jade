@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title= "47"
+        meta(name="viewport", content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        script(data-main="/javascripts/j47app/j47bootstrap", src="/javascripts/j47app/require.js")
+    body
+        div(class="container")
+            div(class="row")
+                div(class="page-header")
+                    h1 47
+
+        div(ng-controller="j47mainController as j47main" class="invisible" ng-class="j47main.mainClass")
+            div(class="container")
+                div(class="row")
+                    div {{j47main.message}}
+
